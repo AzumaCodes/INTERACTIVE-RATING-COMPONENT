@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <style>
+      :root {
+        --background: hsl(216, 12%, 8%);
+        --primary-color: hsl(213, 19%, 18%);
+        --secondary-color: hsl(217, 12%, 63%);
+        --accent-color: hsl(25, 97%, 53%);
+        --text-color: hsl(0, 0%, 100%);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background);
+        color: var(--text-color);
+        margin-top: 5rem;
+      }
+      button {
+        font-family: inherit;
+      }
+      .user-rating img {
+        background-color: var(--secondary-color);
+        padding: 0.05rem;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+      }
+      .user-rating,
+      .user-rating-hidden {
+        background-color: var(--primary-color);
+        border-radius: 2rem;
+        padding: 1.5rem;
+        max-width: 400px;
+      }
+      .user-rating h1,
+      .user-rating-hidden h1 {
+        margin: 1rem;
+      }
+      .user-rating p,
+      .user-rating-hidden p {
+        font-size: 20px;
+        margin: 1rem;
+        line-height: 1.8;
+      }
+      .rating-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+      .buttons {
+        background-color: var(--secondary-color);
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        transition: 200ms ease;
+      }
+      .submit-btn {
+        width: 100%;
+        height: 2rem;
+        border: none;
+        border-radius: 1rem;
+        background-color: var(--accent-color);
+        color: var(--text-color);
+        cursor: pointer;
+        transition: 200ms ease;
+      }
+      .buttons:hover {
+        background-color: var(--accent-color);
+        color: var(--text-color);
+      }
+      .submit-btn:hover {
+        background-color: hsl(25, 97%, 63%);
+      }
+      .buttons:active {
+        background-color: white;
+      }
+      .submit-btn:active {
+        background-color: white;
+      }
+      .user-rating-hidden {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        display: none;
+      }
+      .user-rating-hidden img {
+        display: block;
+        margin: 0 auto 2rem;
+      }
+      .user-rating-hidden #selector {
+        color: var(--accent-color);
+      }
+      .user-rating-hidden {
+        margin: 2rem 0;
+      }
+      .attribution {
+        font-size: 15px;
+        text-align: center;
+        flex-wrap: wrap;
+        align-items: center;
+        display: none;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="user-rating">
+      <img src="images/icon-star.svg" />
+      <h1>How did we do?</h1>
+      <p id="submit">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <div class="rating-btn">
+        <button class="buttons">1</button>
+        <button class="buttons">2</button>
+        <button class="buttons">3</button>
+        <button class="buttons">4</button>
+        <button class="buttons">5</button>
+      </div>
+      <button type="submit" class="submit-btn" id="submitButton">Submit</button>
+    </div>
+
+    <div class="user-rating-hidden">
+      <img src="images\illustration-thank-you.svg" />
+      <p id="selector">You selected<span id="rating"> out of 5</span></p>
+      <h1>Thank you!</h1>
+      <p>
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don't hesitate to get in touch!
+      </p>
+    </div>
+
+    <!-- Thank you state end -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">AzumaCodes</a>.
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
